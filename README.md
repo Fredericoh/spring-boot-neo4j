@@ -1,12 +1,14 @@
 # spring-boot-neo4j
 
-Neo4J
-Docker command to bring up Neo4J server
+#### Neo4J com Docker 
+```
+Comando para rodar o Neo4J server
 docker run --publish=7474:7474 --publish=7687:7687 neo4j:3.0
 Neo4J Browser URL
 http://localhost:7474/browser
-
-Script para criar nos e relacionamentos
+```
+#### Script para criar nos e relacionamentos
+```
 CREATE (JanelaIndiscreta:Filme {titulo: 'Janela Indiscreta', diretor: 'Alfred Hitchcock'})
 CREATE (UmCorpoQueCai:Filme {titulo: 'Um Corpo que Cai', diretor: 'Alfred Hitchcock'})
 CREATE (CidadaoKane:Filme {titulo: 'Cidadão Kane', diretor: 'Orson Welles'})
@@ -419,3 +421,4 @@ CREATE
 (LevadaDaBreca)-[:RATED {rating: 8}]->(Cleuza)
 
 ;
+```
