@@ -422,3 +422,14 @@ CREATE
 
 ;
 ```
+#### Listar todos os relacionamentos
+```
+MATCH (u:Usuario)<-[r:RATED]-(f:Filme) RETURN u,r,f
+```
+#### Adicionar outro relacionamento
+```
+MATCH (RefereniaDoFilme:Filme {titulo: 'nome do filme'}), (Frederico:Usuario)
+CREATE
+(ReferenciaDoFilme)-[:RATED {rating: 8}]->(Frederico)
+;
+```
